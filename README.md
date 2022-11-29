@@ -1,2 +1,2 @@
 # LeetCode-Solutions
-# LeetHub
+# Synced with the help of LeetHub
