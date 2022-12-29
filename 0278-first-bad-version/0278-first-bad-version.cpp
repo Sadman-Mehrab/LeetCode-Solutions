@@ -4,10 +4,8 @@
 class Solution {
 public:
     int firstBadVersion(int n) {
-        while(true){
-            if(!isBadVersion(n)) return n+1;
-            n--;
-        }
+        for(int i=n;i>=0;i--)
+            if(!isBadVersion(i)) return i+1;
         return -1;
     }
 };
