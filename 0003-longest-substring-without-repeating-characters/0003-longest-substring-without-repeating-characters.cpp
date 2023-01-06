@@ -5,10 +5,10 @@ public:
         int maxLen = 0;
         for(int i=0;i<n;i++){
             int currLen = 0;
-            map<char,int> sub;
+            map<char,bool> sub;
             for(int j=i;j<n;j++){
                 if(sub.count(s[j])) break;
-                else sub[s[j]]++;
+                else sub[s[j]] = true;
                 currLen++;
                 maxLen = max(currLen,maxLen);
             }
