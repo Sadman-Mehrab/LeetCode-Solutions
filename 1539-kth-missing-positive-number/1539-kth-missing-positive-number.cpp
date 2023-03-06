@@ -4,7 +4,7 @@ public:
         map<int,bool> present;
         vector<int> missing;
         for(int x: arr) present[x] = true;
-        for(int i=1;missing.size() < k;i++) if(!present.count(i)) missing.push_back(i);
+        for(int i=1;missing.size() < k;i++) if(!present[i]) missing.push_back(i);
         return missing[k-1];
     }
 };
