@@ -1,11 +1,10 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         l = len(nums)
-        freq = defaultdict(int)
-        for n in nums:
-            freq[n] += 1
-            if freq[n] > l/2:
-                return n
+        freq = Counter(nums)
+        for f in freq:
+            if freq[f] > l/2:
+                return f
         return 0
         
         
