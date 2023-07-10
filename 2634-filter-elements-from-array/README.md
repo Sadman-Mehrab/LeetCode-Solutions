@@ -1,8 +1,15 @@
-<h2><a href="https://leetcode.com/problems/filter-elements-from-array/">2634. Filter Elements from Array</a></h2><h3>Easy</h3><hr><div><p>Given an integer array&nbsp;<code>arr</code>&nbsp;and a filtering&nbsp;function&nbsp;<code>fn</code>,&nbsp;return&nbsp;a new array with a fewer or equal number of elements.</p>
+<h2><a href="https://leetcode.com/problems/filter-elements-from-array/">2634. Filter Elements from Array</a></h2><h3>Easy</h3><hr><div><p>Given an integer array <code>arr</code> and a filtering function <code>fn</code>, return a filtered array <code>filteredArr</code>.</p>
 
-<p>The returned array should only contain elements where&nbsp;<code>fn(arr[i],&nbsp;i)</code>&nbsp;evaluated to a truthy value.</p>
+<p>The <code>fn</code> function takes one or two arguments:</p>
 
-<p>Please solve it without the built-in <code>Array.filter</code> method.</p>
+<ul>
+	<li><code><font face="monospace">arr[i]</font></code> - number&nbsp;from&nbsp;the <code>arr</code></li>
+	<li><code>i</code>&nbsp;- index of <code>arr[i]</code></li>
+</ul>
+
+<p><code>filteredArr</code> should only contain the elements from the&nbsp;<code>arr</code> for which the expression <code>fn(arr[i], i)</code> evaluates to a <strong>truthy</strong> value. A&nbsp;<strong>truthy</strong>&nbsp;value is a value where&nbsp;<code>Boolean(value)</code>&nbsp;returns&nbsp;<code>true</code>.</p>
+
+<p>Please solve it without the built-in Array.filter method.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
