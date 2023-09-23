@@ -9,7 +9,7 @@ class Solution:
                     break
                 elif char != '.':
                     c += char
-            uniqueEmails[c + '@' + b] = 0
+            uniqueEmails[c + '@' + b] = True
 
         return len(uniqueEmails)
 
