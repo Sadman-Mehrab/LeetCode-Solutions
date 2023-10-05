@@ -8,7 +8,7 @@ class Solution:
                 mp[i] += 1
             else:
                 mp[i] = 1
-        for key in mp.keys():
+        for key in mp:
             if mp[key] > n//3:
                 ret.append(key)
         return ret
