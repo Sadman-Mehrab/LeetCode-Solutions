@@ -1,17 +1,14 @@
 class Solution:
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         all = set()
-        losers = {}
-        ans1 = []
-        ans2 = []
+        losers = defaultdict(int)
+        ans1, ans2 = [], []
+
         for m in matches:
             all.add(m[0])
             all.add(m[1])
-            if m[1] not in losers:
-                losers[m[1]] = 1
-            else:
-                losers[m[1]] += 1
-
+            losers[m[1]] += 1
+            
         for k in losers:
             if losers[k] == 1:
                 ans2.append(k)
