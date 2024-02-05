@@ -1,11 +1,9 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        freq = {}
-        for i in range(len(s)):
-            if s[i] not in freq:
-                freq[s[i]] = []
-            freq[s[i]].append(i)
+        freq = defaultdict(int)
         for c in s:
-            if len(freq[c]) == 1:
-                return freq[c][0]
+            freq[c] += 1
+        for i in range(len(s)):
+            if freq[s[i]] == 1:
+                return i
         return -1
