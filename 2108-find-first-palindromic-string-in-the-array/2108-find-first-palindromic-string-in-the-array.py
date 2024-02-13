@@ -9,10 +9,8 @@ class Solution:
                 return False
         return True
     def firstPalindrome(self, words: List[str]) -> str:
-        res = ""
         for w in words:
             if self.isPalindrome(w):
-                res = w
-                break
-        return res
+                return w
+        return ""
         
