@@ -13,12 +13,14 @@ class TimeMap:
             return ""
         vals = self.kvs[key]
         ans = ""
-        i = len(vals) - 1
-        while i >= 0:
-            if vals[i][0] <= timestamp:
-                ans = vals[i][1]
-                break
-            i -= 1 
+        l, r = 0, len(vals) - 1
+        while l <= r:
+            m = (l + r)//2
+            if vals[m][0] <= timestamp:
+                ans = vals[m][1]
+                l = m + 1 
+            else:
+                r = m - 1
         return ans
             
 # Your TimeMap object will be instantiated and called as such:
