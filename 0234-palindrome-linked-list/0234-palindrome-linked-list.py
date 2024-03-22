@@ -13,7 +13,7 @@ class Solution:
             temp = temp.next
         
         l, r = 0 , len(arr) - 1
-        while l <= r:
+        while l < r:
             if arr[l] != arr[r]:
                 return False
             l += 1
