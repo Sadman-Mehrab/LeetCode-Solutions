@@ -20,9 +20,9 @@ class Solution:
             for i in range(len(queue)):
                 if queue:
                     currNode = queue.popleft()
-                if currNode and currNode.left:
+                if currNode.left:
                     queue.append(currNode.left)
-                if currNode and currNode.right:
+                if currNode.right:
                     queue.append(currNode.right)
 
         return height
