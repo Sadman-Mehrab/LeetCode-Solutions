@@ -16,8 +16,9 @@ class Solution:
         result.append([root.val])
         queue.append(root)
 
-        while len(queue):
+        while len(queue) > 0:            
             nodes = []
+            
             for i in range(len(queue)):
                 currentNode = queue.popleft()
 
@@ -31,7 +32,6 @@ class Solution:
 
             if len(nodes) > 0:
                 result.append(nodes)
-
 
         return result
 
